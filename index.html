@@ -38,14 +38,14 @@
                         <div class="navbar-nav d-flex gap-3">
                             <a class="nav-link text-white" href="#Inicio">Inicio</a>
                             <a class="nav-link text-white" href="#Categorias">Categorias</a>
-                             <a class="nav-link text-white" href="#Ofertas">Ofertas</a>
+                            <a class="nav-link text-white" href="#Ofertas">Ofertas</a>
                             <a class="nav-link text-white" href="#Productos">Productos</a>
                             <a class="nav-link text-white" href="#Contacto">Contacto</a>
                         </div>
                         <div class="d-none d-lg-flex gap-3 align-items-center fs-5">
                             <i class="bi bi-search"></i>
                             <i class="bi bi-person"></i>
-                            <i class="bi bi-suit-heart position-relative pe-3"><span
+                            <i class="bi bi-suit-heart position-relative me-2"><span
                                     class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                     2</span></i>
                             <i class="bi bi-cart2 position-relative"><span
@@ -71,7 +71,8 @@
 
                     </div>
                     <div class="col-12 col-md-6 d-flex justify-content-center pt-5 pb-5">
-                        <img src="./img/tienda.jpeg" alt="" class="rounded w-100"  style="width: 100%; max-width: 500px; object-fit: cover;">
+                        <img src="./img/tienda.jpeg" alt="" class="rounded w-100"
+                            style="width: 100%; max-width: 500px; object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -188,148 +189,30 @@
         </div>
         <hr class="mt-5">
         <div class="container">
-            <div class="row mb-5">
-                <h2 class="text-center text-black mb-3 mt-5 fw-bold" id="Productos">Productos Destacados</h2>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 gy-5">
-                    <div class="card position-relative">
-                        <img src="./img/camiseta.jpeg" class="card-img-top position-relative" alt="..."
-                            style="object-fit:contain; height: 200px;">
-                            <span class="badge position-absolute m-3 end-0 px-2 py-2 rounded-circle text-black fs-6"><i
-                                class="bi bi-suit-heart"></i></span>
-                        <span class="badge position-absolute m-3 bg-danger px-2 py-2">Oferta</span>
-                        <div class="card-body">
-                            <h6 class="card-title fw-bold">Camiseta casual</h6>
-                            <div class="d-flex align-items-center mt-1 mb-3">
-                                <span class="fw-bold" style="color: #6a11cb; font-size: larger;">$24.99</span>
-                                <span class="ms-2 text-decoration-line-through">$29.99</span>
-                            </div>
-                            <a href="" style="background-color: #6a11cb;" class="btn text-white w-100">Añadir al
-                                carrito</a>
-                        </div>
+            <h2 class="text-center text-black mb-3 mt-5 fw-bold" id="Productos">Productos Destacados</h2>
+
+            <div id="Loading" class="text-center">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+     
+
+            <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+                aria-labelledby="staticBackdropLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="staticBackdropLabel">Productos Añadidos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div id="canvaBody" class="d-flex flex-column align-items-center">
+        
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 gy-5">
-                    <div class="card position-relative">
-                        <img src="./img/zapatilla deportiva.jpeg" class="card-img-top position-relative" alt="..."
-                            style="object-fit:contain; height: 200px;">
-                        <span class="badge position-absolute m-3 end-0 px-2 py-2 rounded-circle text-black fs-6"><i
-                                class="bi bi-suit-heart"></i></span>
-                        <div class="card-body">
-                            <h6 class="card-title fw-bold">Zapatilla deportiva</h6>
-                            <div class="d-flex align-items-center mt-1 mb-3">
-                                <span class="fw-bold" style="color: #6a11cb; font-size: larger;">$24.99</span>
-                                <span class="ms-2 text-decoration-line-through">$29.99</span>
-                            </div>
-                            <a href="" style="background-color: #6a11cb;" class="btn text-white w-100">Añadir al
-                                carrito</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 gy-5">
-                    <div class="card position-relative">
-                        <img src="./img/reloj.jpeg" class="card-img-top position-relative" alt="..."
-                            style="object-fit: contain; height: 200px;">
-                        <span class="badge position-absolute m-3 bg-danger px-2 py-2">Oferta</span>
-                        <span class="badge position-absolute m-3 end-0 px-2 py-2 rounded-circle text-black fs-6"><i
-                                class="bi bi-suit-heart"></i></span>
-                        <div class="card-body">
-                            <h6 class="card-title fw-bold">Reloj elegante</h6>
-                            <div class="d-flex align-items-center mt-1 mb-3">
-                                <span class="fw-bold" style="color: #6a11cb; font-size: larger;">$24.99</span>
-                                <span class="ms-2 text-decoration-line-through">$29.99</span>
-                            </div>
-                            <a href="" style="background-color: #6a11cb;" class="btn text-white w-100">Añadir al
-                                carrito</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 gy-5">
-                    <div class="card position-relative">
-                        <img src="./img/bolso.jpeg" class="card-img-top position-relative" alt="..."
-                            style="object-fit: contain; height: 200px;">
-                        <span class="badge position-absolute m-3 end-0 px-2 py-2 rounded-circle text-black fs-6"><i
-                                class="bi bi-suit-heart"></i></span>
-                        <div class="card-body">
-                            <h6 class="card-title fw-bold">Bolso de mano</h6>
-                            <div class="d-flex align-items-center mt-1 mb-3">
-                                <span class="fw-bold" style="color: #6a11cb; font-size: larger;">$24.99</span>
-                                <span class="ms-2 text-decoration-line-through">$29.99</span>
-                            </div>
-                            <a href="" style="background-color: #6a11cb;" class="btn text-white w-100">Añadir al
-                                carrito</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 gy-5">
-                    <div class="card position-relative">
-                        <img src="./img/auriculares.jpeg" class="card-img-top position-relative" alt="..."
-                            style="object-fit: contain; height: 200px;">
-                        <span class="badge position-absolute m-3 bg-danger px-2 py-2">Oferta</span>
-                        <span class="badge position-absolute m-3 end-0 px-2 py-2 rounded-circle text-black fs-6"><i
-                                class="bi bi-suit-heart"></i></span>
-                        <div class="card-body">
-                            <h6 class="card-title fw-bold">Auriculares Bluetooth</h6>
-                            <div class="d-flex align-items-center mt-1 mb-3">
-                                <span class="fw-bold" style="color: #6a11cb; font-size: larger;">$24.99</span>
-                                <span class="ms-2 text-decoration-line-through">$29.99</span>
-                            </div>
-                            <a href="" style="background-color: #6a11cb;" class="btn text-white w-100">Añadir al
-                                carrito</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 gy-5">
-                    <div class="card position-relative">
-                        <img src="./img/gafas.jpeg" class="card-img-top position-relative" alt="..."
-                            style="object-fit: contain; height: 200px;">
-                        <span class="badge position-absolute m-3 end-0 px-2 py-2 rounded-circle text-black fs-6"><i
-                                class="bi bi-suit-heart"></i></span>
-                        <div class="card-body">
-                            <h6 class="card-title fw-bold">Gafas de Sol</h6>
-                            <div class="d-flex align-items-center mt-1 mb-3">
-                                <span class="fw-bold" style="color: #6a11cb; font-size: larger;">$24.99</span>
-                                <span class="ms-2 text-decoration-line-through">$29.99</span>
-                            </div>
-                            <a href="" style="background-color: #6a11cb;" class="btn text-white w-100">Añadir al
-                                carrito</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 gy-5">
-                    <div class="card position-relative">
-                        <img src="./img/chaqueta.jpeg" class="card-img-top position-relative" alt="..."
-                            style="object-fit: contain; height: 200px;">
-                        <span class="badge position-absolute m-3 end-0 px-2 py-2 rounded-circle text-black fs-6"><i
-                                class="bi bi-suit-heart"></i></span>
-                        <div class="card-body">
-                            <h6 class="card-title fw-bold">Chaqueta de Invierno</h6>
-                            <div class="d-flex align-items-center mt-1 mb-3">
-                                <span class="fw-bold" style="color: #6a11cb; font-size: larger;">$24.99</span>
-                                <span class="ms-2 text-decoration-line-through">$29.99</span>
-                            </div>
-                            <a href="" style="background-color: #6a11cb;" class="btn text-white w-100">Añadir al
-                                carrito</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 gy-5">
-                    <div class="card position-relative">
-                        <img src="./img/smartphone.jpeg" class="card-img-top position-relative" alt="..."
-                            style="object-fit: contain; height: 200px;">
-                        <span class="badge position-absolute m-3 bg-danger px-2 py-2">Oferta</span>
-                        <span class="badge position-absolute m-3 end-0 px-2 py-2 rounded-circle text-black fs-6"><i
-                                class="bi bi-suit-heart"></i></span>
-                        <div class="card-body">
-                            <h6 class="card-title fw-bold">Smartphone</h6>
-                            <div class="d-flex align-items-center mt-1 mb-3">
-                                <span class="fw-bold" style="color: #6a11cb; font-size: larger;">$24.99</span>
-                                <span class="ms-2 text-decoration-line-through">$29.99</span>
-                            </div>
-                            <a href="" style="background-color: #6a11cb;" class="btn text-white w-100">Añadir al
-                                carrito</a>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div id="Row" class="row mb-5 d-none">
+
+
             </div>
         </div>
         <div class="row py-5" style="background-color: #f8f9fa;">
@@ -403,7 +286,7 @@
 
         </div>
     </footer>
-
+    <script src="./index.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 
