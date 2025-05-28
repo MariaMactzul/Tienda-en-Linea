@@ -1,44 +1,44 @@
-const Row=document.querySelector('#Row')
-const Loading=document.querySelector('#Loading')
-let Canva=document.querySelector('#canvaBody')
-let url='https://api.escuelajs.co/api/v1/products'
-let card=''
+const Row = document.querySelector('#Row')
+const Loading = document.querySelector('#Loading')
+let Canva = document.querySelector('#canvaBody')
+let url = 'https://api.escuelajs.co/api/v1/products'
+let card = ''
+let array = []
 
+let produ = localStorage.getItem('productos') ? localStorage.setItem('productos', JSON.stringify(array)) : []
 
-
-
-let produ=localStorage.getItem('Produ') ? localStorage.setItem('Produ', JSON.parse(obj)):[]
 
 fetch(url)
-    .then((response)=>{
+    .then((response) => {
         return response.json()
     })
-    
-    .then((data)=>{
 
-        const detalles=data.map(element => ({
-            img:element.images[0],
-            Nombre:element.title,
-            Precio:element.price
+    .then((data) => {
+
+        const detalles = data.map(element => ({
+            img: element.images[0],
+            Nombre: element.title,
+            Precio: element.price
         }));
 
         detalles.forEach(element => {
-            card+=Crear(element)      
+            card += Crear(element)
         });
-        Row.innerHTML=card
+        Row.innerHTML = card
     })
 
-    .catch((error)=>{
+    .catch((error) => {
         console.error('Ha occurrido un error', error)
     })
 
 
-setTimeout(()=>{
+setTimeout(() => {
     Loading.classList.add('d-none')
     Row.classList.remove('d-none')
-},500)
+}, 500)
 
-const Crear=(element)=>{
+
+const Crear = (element) => {
     return `
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 gy-5">
                     <div class="card position-relative" style="height:25rem">
@@ -65,17 +65,17 @@ const Crear=(element)=>{
 
 }
 
+const Agregar = (Imagen, Precio, Nombre) => {
 
-const Agregar = (Imagen, Precio, Nombre)=>{
+    let obj = {
+        precio: Precio,
+        name: Nombre
+    }
 
-let obj={
-    precio:Precio,
-    name:Nombre
-}
+    array.push(obj)
 
-localStorage.setItem('productos', JSON.stringify(obj))
 
-Canva.innerHTML+=`<div class="unico card m-3" style="width: 15rem; height:15rem">
+    Canva.innerHTML += `<div class="unico card m-3" style="width: 15rem; height:15rem">
   <img src="${Imagen}" class="card-img-top" alt="..."
   style="object-fit:cover; height: 100px;">
   <div class="card-body">
@@ -86,5 +86,10 @@ Canva.innerHTML+=`<div class="unico card m-3" style="width: 15rem; height:15rem"
 </div>`
 
 
+    localStorage.setItem('productos', JSON.stringify(array))
+
 }
+
+Agregar(produ)
+
 
