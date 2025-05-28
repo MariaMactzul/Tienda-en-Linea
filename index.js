@@ -7,7 +7,7 @@ let card=''
 
 
 
-// let produ=localStorage.getItem('Produ') ? localStorage.setItem('Produ', JSON.parse(obj)):[]
+let produ=localStorage.getItem('Produ') ? localStorage.setItem('Produ', JSON.parse(obj)):[]
 
 fetch(url)
     .then((response)=>{
@@ -84,18 +84,6 @@ Canva.innerHTML+=`<div class="unico card m-3" style="width: 15rem; height:15rem"
     
   </div>
 </div>`
-
-
-
-
-// console.log(Canva.querySelectorAll('.btn')) ///Importante Resordar!!!!! Si queremos Eliminar
-// let cards=Canva.querySelectorAll('.btn')
-// cards.forEach((item)=>{
-//     item.addEventListener('click',(event)=>{
-//         event.target
-//     })
-// })
-
 
 
 }
