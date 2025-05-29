@@ -5,7 +5,7 @@ let url = 'https://api.escuelajs.co/api/v1/products'
 let card = ''
 let array = []
 
-let produ = localStorage.getItem('productos') ? localStorage.setItem('productos', JSON.stringify(array)) : []
+// let produ = localStorage.getItem('productos') ? localStorage.setItem('productos', JSON.stringify(array)) : []
 
 
 fetch(url)
@@ -90,6 +90,6 @@ const Agregar = (Imagen, Precio, Nombre) => {
 
 }
 
-Agregar(produ)
+// Agregar(produ)
 
 
