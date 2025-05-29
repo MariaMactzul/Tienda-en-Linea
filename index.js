@@ -5,8 +5,23 @@ let url = 'https://api.escuelajs.co/api/v1/products'
 let card = ''
 let array = []
 
-// let produ = localStorage.getItem('productos') ? localStorage.setItem('productos', JSON.stringify(array)) : []
+let produ = JSON.parse(localStorage.getItem('productos')) || []
 
+
+
+produ.forEach((item) => {
+    console.log(item)
+    Canva.innerHTML += `<div class="unico card m-3" style="width: 15rem; height:15rem">
+    <img src="${item.img}" class="card-img-top" alt="..."
+    style="object-fit:cover; height: 100px;">
+    <div class="card-body">
+      <h5 class="card-title">${item.name}</h5>
+      <p class="card-text">Precio: ${item.precio}</p>
+      
+    </div>
+  </div>`
+
+})
 
 fetch(url)
     .then((response) => {
@@ -69,11 +84,11 @@ const Agregar = (Imagen, Precio, Nombre) => {
 
     let obj = {
         precio: Precio,
-        name: Nombre
+        name: Nombre,
+        img: Imagen
     }
 
     array.push(obj)
-
 
     Canva.innerHTML += `<div class="unico card m-3" style="width: 15rem; height:15rem">
   <img src="${Imagen}" class="card-img-top" alt="..."
@@ -90,6 +105,6 @@ const Agregar = (Imagen, Precio, Nombre) => {
 
 }
 
-// Agregar(produ)
+
 
 
